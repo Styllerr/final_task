@@ -2,14 +2,43 @@
   max-width: 1600px;
 }
 .prev-button {
-  width: 105px;
-  height: 105px;
   background-color: #4e9b89;
-  font-size: 100px;
+  font-size: 5.56rem;
 }
 a.carousel-control-next {
   justify-content: flex-end;
+  width: 15%;
 }
 a.carousel-control-prev {
   justify-content: flex-start;
+  width: 15%;
+}
+.inner-text {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+  top: 30%;
+  left: 17%;
+  text-align: center;
+}
+.inner-text__text {
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+.inner-text__text_colored {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  color: #4e9b89;
+}
+.inner-text__button {
+  border: 2px solid #4e9b89;
+  background: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-size: 14px;
+  padding: 14px 28px;
 }
