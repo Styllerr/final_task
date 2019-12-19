@@ -1,3 +1,6 @@
+#carouselExampleFade {
+  max-width: 1600px;
+}
 .prev-button {
   width: 105px;
   height: 105px;
@@ -5,8 +8,8 @@
   font-size: 100px;
 }
 a.carousel-control-next {
-  right: -41px;
+  justify-content: flex-end;
 }
 a.carousel-control-prev {
-  left: -41px;
+  justify-content: flex-start;
 }
