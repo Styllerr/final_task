@@ -1,0 +1,12 @@
+.prev-button {
+  width: 105px;
+  height: 105px;
+  background-color: #4e9b89;
+  font-size: 100px;
+}
+a.carousel-control-next {
+  right: -41px;
+}
+a.carousel-control-prev {
+  left: -41px;
+}
