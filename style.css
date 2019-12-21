@@ -1,5 +1,11 @@
-#carouselExampleFade {
+.wrapper-carousel {
   max-width: 1600px;
+  display: grid;
+  grid-template-columns: minmax(320px, 1600px);
+}
+#carouselExampleControls {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 .prev-button {
   background-color: #4e9b89;
@@ -14,14 +20,17 @@ a.carousel-control-prev {
   width: 15%;
 }
 .inner-text {
+  width: 75%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  z-index: 1;
+  align-self: center;
+  justify-content: space-around;
   font-family: 'Open Sans';
   font-weight: 600;
   font-size: 48px;
   text-transform: uppercase;
   color: #ffffff;
-  position: absolute;
-  top: 30%;
-  left: 17%;
   text-align: center;
 }
 .inner-text__text {
