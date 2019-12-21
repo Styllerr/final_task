@@ -25,7 +25,7 @@ a.carousel-control-prev {
   grid-row: 1 / 2;
   z-index: 1;
   align-self: center;
-  justify-content: space-around;
+  justify-self: center;
   font-family: 'Open Sans';
   font-weight: 600;
   font-size: 48px;
