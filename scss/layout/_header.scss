@@ -1,0 +1,8 @@
+.header {
+    @extend %main-maket;
+    justify-items: flex-end;
+    background-color: $main-them-color;
+}
+.top_menu {
+    display: inline-block;
+}
