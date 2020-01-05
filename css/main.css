@@ -1,8 +1,10 @@
-.header {
+.top-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 15.31rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 15px 15.3125%;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -348,16 +350,56 @@ template {
   display: none;
 }
 
-body {
-  max-width: 1600px;
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/font/opensans/OpenSans-Light.eot");
+  src: local("Open Sans Light"), local("OpenSans-Light"), url("/font/opensans/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("/font/opensans/OpenSans-Light.woff") format("woff"), url("/font/opensans/OpenSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
 
 .header {
-  justify-items: flex-end;
-  background-color: #1abc9c;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.top_menu {
+.top-header {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #1abc9c;
+  color: #fffcfc;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.top-header_contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: auto;
+}
+
+.top-header_login-menu {
   display: inline-block;
+}
+
+.top-header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-header a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-header a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 /*# sourceMappingURL=main.css.map */

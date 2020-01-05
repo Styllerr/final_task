@@ -1,8 +1,38 @@
 .header {
-    @extend %main-maket;
-    justify-items: flex-end;
-    background-color: $main-them-color;
+    max-width: $page-size;
+    width: 100%;
+    margin: 0 auto;
 }
-.top_menu {
-    display: inline-block;
+
+.top-header {
+    @extend %main-maket;
+    justify-content: flex-end;
+    background-color: $main-them-color;
+    color: $white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+
+    &_contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: auto;
+    }
+
+    &_login-menu {
+        display: inline-block;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        &:link {
+            text-decoration: none;
+            color: inherit;
+        }
+        &:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
 }
