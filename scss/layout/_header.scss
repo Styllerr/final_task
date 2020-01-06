@@ -7,32 +7,121 @@
 .top-header {
     @extend %main-maket;
     justify-content: flex-end;
-    background-color: $main-them-color;
+    align-items: center;
+    background-color: $main-theme-color;
     color: $white;
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 14px;
-
-    &_contact-info {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: auto;
-    }
-
-    &_login-menu {
-        display: inline-block;
-    }
-
-    a {
+    & a {
         text-decoration: none;
         color: inherit;
-        &:link {
-            text-decoration: none;
-            color: inherit;
-        }
+        &:link,
         &:visited {
-            text-decoration: none;
-            color: inherit;
+            @extend a;
         }
+        &:hover {
+            color: (darken($color: $white, $amount: 60));
+        }
+    }
+}
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+    &_mail-me {
+        margin-left: 2.1875rem;
+    }
+    &_icon {
+        font-size: 20px;
+        vertical-align: middle;
+    }
+}
+.login-menu {
+    display: inline-block;
+    &_item:not(first-child) {
+        margin-left: 2.1875rem;
+    }
+}
+
+.menu-section {
+    @extend %main-maket;
+    justify-content: space-between;
+    align-items: center;
+    color: $dark;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+}
+
+.logo {
+    font-family: 'Roboto', sans-serif;
+    color: $dark-light;
+    font-weight: 300;
+    font-size: 30px;
+    &:first-letter {
+        color: $main-theme-color;
+        font-weight: 900;
+    }
+}
+
+.shop-navigation {
+    font-size: 14px;
+    font-weight: bold;
+    @include link-style ($main-theme-color, $theme-color-active);
+}
+
+.cart {
+    @include link-style ($dark, $dark);
+}
+.counter {
+    position: relative;
+    &__text {
+        font-size: 18px;
+        font-weight: normal;
+    }
+    &:hover {
+        color: $dark;
+        & .popup-basket {
+            opacity: 1;
+        }
+    }
+}
+.basket {
+    display: inline-block;
+    position: relative;
+    &__square {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        border: 1px solid $dark;
+        background-color: $white;
+        color: $main-theme-color;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+    }
+    &__circle {
+        height: 14px;
+        width: 14px;
+        border: 1px solid $dark;
+        border-radius: 50%;
+        position: absolute;
+        top: -9px;
+        right: 3px;
+        z-index: 1;
+    }
+}
+.popup-basket {
+    box-sizing: border-box;
+    border: 1px solid $main-theme-color;
+    padding: 4px;
+    font-size: 12px;
+    position: absolute;
+    top: 27px;
+    opacity: 0;
+    transition: opacity 1s;
+    &__text {
+        font-size: 16px;
+        font-weight: bold;
     }
 }

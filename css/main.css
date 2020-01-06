@@ -1,4 +1,4 @@
-.top-header {
+.top-header, .menu-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,7 +78,7 @@ pre {
 /**
  * Remove the gray background on active links in IE 10.
  */
-a {
+a, .top-header a:link, .top-header a:visited, .shop-navigation a:link, .shop-navigation a:visited, .cart a:link, .cart a:visited {
   background-color: transparent;
 }
 
@@ -351,10 +351,54 @@ template {
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url("/font/opensans/OpenSans-Light.eot");
-  src: local("Open Sans Light"), local("OpenSans-Light"), url("/font/opensans/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("/font/opensans/OpenSans-Light.woff") format("woff"), url("/font/opensans/OpenSans-Light.ttf") format("truetype");
+  font-family: "Open Sans";
+  src: url("font/opensans/OpenSans-Light.eot");
+  src: local("Open Sans Light"), local("OpenSans-Light"), url("font/opensans/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("font/opensans/OpenSans-Light.woff") format("woff"), url("font/opensans/OpenSans-Light.ttf") format("truetype");
   font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("OpenSans-Regular.eot");
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("font/opensans/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("font/opensans/OpenSans-Regular.woff") format("woff"), url("font/opensans/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("OpenSans-Bold.eot");
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("font/opensans/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("font/opensans/OpenSans-Bold.woff") format("woff"), url("font/opensans/OpenSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light"), local("Roboto-Light"), url("font/roboto/Robotolight.woff2") format("woff2"), url("font/roboto/Robotolight.woff") format("woff"), url("font/roboto/Robotolight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Regular"), url("font/roboto/Roboto.woff2") format("woff2"), url("font/roboto/Roboto.woff") format("woff"), url("font/roboto/Roboto.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("font/roboto/Robotobold.woff2") format("woff2"), url("font/roboto/Robotobold.woff") format("woff"), url("font/roboto/Robotobold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black"), local("Roboto-Black"), url("font/roboto/Robotoblack.woff2") format("woff2"), url("font/roboto/Robotoblack.woff") format("woff"), url("font/roboto/Robotoblack.ttf") format("truetype");
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -368,14 +412,26 @@ template {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #1abc9c;
-  color: #fffcfc;
+  color: #ffffff;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
 }
 
-.top-header_contact-info {
+.top-header a, .top-header a:link, .top-header a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-header a:hover {
+  color: #666666;
+}
+
+.contact-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,22 +440,227 @@ template {
   margin-right: auto;
 }
 
-.top-header_login-menu {
+.contact-info_mail-me {
+  margin-left: 2.1875rem;
+}
+
+.contact-info_icon {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.login-menu {
   display: inline-block;
 }
 
-.top-header a {
+.login-menu_item:not(first-child) {
+  margin-left: 2.1875rem;
+}
+
+.menu-section {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #0f0101;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.logo {
+  font-family: 'Roboto', sans-serif;
+  color: #555252;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.logo:first-letter {
+  color: #1abc9c;
+  font-weight: 900;
+}
+
+.shop-navigation {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.shop-navigation a, .shop-navigation a:link, .shop-navigation a:visited {
   text-decoration: none;
   color: inherit;
 }
 
-.top-header a:link {
+.shop-navigation a:hover {
+  color: #1abc9c;
+}
+
+.shop-navigation a:active {
+  color: #22ddb8;
+}
+
+.cart a, .cart a:link, .cart a:visited {
   text-decoration: none;
   color: inherit;
 }
 
-.top-header a:visited {
-  text-decoration: none;
-  color: inherit;
+.cart a:hover {
+  color: #0f0101;
+}
+
+.cart a:active {
+  color: #0f0101;
+}
+
+.counter {
+  position: relative;
+}
+
+.counter__text {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.counter:hover {
+  color: #0f0101;
+}
+
+.counter:hover .popup-basket {
+  opacity: 1;
+}
+
+.basket {
+  display: inline-block;
+  position: relative;
+}
+
+.basket__square {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #0f0101;
+  background-color: #ffffff;
+  color: #1abc9c;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.basket__circle {
+  height: 14px;
+  width: 14px;
+  border: 1px solid #0f0101;
+  border-radius: 50%;
+  position: absolute;
+  top: -9px;
+  right: 3px;
+  z-index: 1;
+}
+
+.popup-basket {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #1abc9c;
+  padding: 4px;
+  font-size: 12px;
+  position: absolute;
+  top: 27px;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.popup-basket__text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.carousel-section {
+  max-width: 1600px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(320px, 1600px);
+      grid-template-columns: minmax(320px, 1600px);
+}
+
+#carouselExampleControls {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.prev-button {
+  background-color: #4ec6ab;
+  font-size: 5.56rem;
+  padding: 0.5rem;
+  margin-bottom: 60px;
+}
+
+a.carousel-control-next, .top-header a.carousel-control-next:link, .top-header a.carousel-control-next:visited, .shop-navigation a.carousel-control-next:link, .shop-navigation a.carousel-control-next:visited, .cart a.carousel-control-next:link, .cart a.carousel-control-next:visited {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 15%;
+}
+
+a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a.carousel-control-prev:visited, .shop-navigation a.carousel-control-prev:link, .shop-navigation a.carousel-control-prev:visited, .cart a.carousel-control-prev:link, .cart a.carousel-control-prev:visited {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 15%;
+}
+
+.carousel-content {
+  width: 75%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  z-index: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+.carousel-content__text {
+  margin-top: -7px;
+  margin-bottom: 22px;
+  line-height: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.carousel-content__text_colored {
+  font-weight: 700;
+  color: #4ec6ab;
+}
+
+.carousel-content__text_marked {
+  font-weight: 600;
+  color: #4ec6ab;
+}
+
+.carousel-content__button {
+  border: 2px solid #4ec6ab;
+  background: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 14px;
+  padding: 10px 27px;
 }
 /*# sourceMappingURL=main.css.map */
