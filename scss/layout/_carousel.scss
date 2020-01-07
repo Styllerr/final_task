@@ -2,6 +2,7 @@
     max-width: 1600px;
     display: grid;
     grid-template-columns: minmax(320px, 1600px);
+    margin: 0 auto;
 }
 #carouselExampleControls {
     grid-column: 1 / 2;

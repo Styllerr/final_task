@@ -1,4 +1,4 @@
-.top-header, .menu-section {
+.top-header, .menu-section, .about-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,7 +78,7 @@ pre {
 /**
  * Remove the gray background on active links in IE 10.
  */
-a, .top-header a:link, .top-header a:visited, .shop-navigation a:link, .shop-navigation a:visited, .cart a:link, .cart a:visited {
+a, .top-header a:link, .top-header a:visited, .shop-navigation a:link, .shop-navigation a:visited, .cart a:link, .cart a:visited, .about-section a:link, .about-section a:visited {
   background-color: transparent;
 }
 
@@ -367,6 +367,14 @@ template {
 }
 
 @font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-SemiBold.eot");
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("OpenSans-SemiBold.woff") format("woff"), url("OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Open Sans";
   src: url("OpenSans-Bold.eot");
   src: local("Open Sans Bold"), local("OpenSans-Bold"), url("font/opensans/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("font/opensans/OpenSans-Bold.woff") format("woff"), url("font/opensans/OpenSans-Bold.ttf") format("truetype");
@@ -561,6 +569,7 @@ template {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #1abc9c;
+  background-color: #ffffff;
   padding: 4px;
   font-size: 12px;
   position: absolute;
@@ -568,6 +577,7 @@ template {
   opacity: 0;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
+  z-index: 1;
 }
 
 .popup-basket__text {
@@ -581,6 +591,7 @@ template {
   display: grid;
   -ms-grid-columns: minmax(320px, 1600px);
       grid-template-columns: minmax(320px, 1600px);
+  margin: 0 auto;
 }
 
 #carouselExampleControls {
@@ -599,14 +610,14 @@ template {
   margin-bottom: 60px;
 }
 
-a.carousel-control-next, .top-header a.carousel-control-next:link, .top-header a.carousel-control-next:visited, .shop-navigation a.carousel-control-next:link, .shop-navigation a.carousel-control-next:visited, .cart a.carousel-control-next:link, .cart a.carousel-control-next:visited {
+a.carousel-control-next, .top-header a.carousel-control-next:link, .top-header a.carousel-control-next:visited, .shop-navigation a.carousel-control-next:link, .shop-navigation a.carousel-control-next:visited, .cart a.carousel-control-next:link, .cart a.carousel-control-next:visited, .about-section a.carousel-control-next:link, .about-section a.carousel-control-next:visited {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 15%;
 }
 
-a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a.carousel-control-prev:visited, .shop-navigation a.carousel-control-prev:link, .shop-navigation a.carousel-control-prev:visited, .cart a.carousel-control-prev:link, .cart a.carousel-control-prev:visited {
+a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a.carousel-control-prev:visited, .shop-navigation a.carousel-control-prev:link, .shop-navigation a.carousel-control-prev:visited, .cart a.carousel-control-prev:link, .cart a.carousel-control-prev:visited, .about-section a.carousel-control-prev:link, .about-section a.carousel-control-prev:visited {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -662,5 +673,71 @@ a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a
   font-weight: normal;
   font-size: 14px;
   padding: 10px 27px;
+}
+
+.about-section {
+  padding-top: 6.25%;
+  padding-bottom: 5%;
+}
+
+.about-section a, .about-section a:link, .about-section a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.about-section a:hover {
+  color: #1abc9c;
+}
+
+.about-section a:active {
+  color: #22ddb8;
+}
+
+.about-section__item {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  color: #555252;
+  text-align: center;
+}
+
+.link__icon {
+  font-size: 70px;
+}
+
+.link__caption {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 47px;
+  margin-bottom: 19px;
+}
+
+.link__text {
+  font-family: "Open Sans";
+  font-weight: lighter;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.link:hover > .link__text {
+  color: #555252;
 }
 /*# sourceMappingURL=main.css.map */

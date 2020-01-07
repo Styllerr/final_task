@@ -114,12 +114,14 @@
 .popup-basket {
     box-sizing: border-box;
     border: 1px solid $main-theme-color;
+    background-color: $white;
     padding: 4px;
     font-size: 12px;
     position: absolute;
     top: 27px;
     opacity: 0;
     transition: opacity 1s;
+    z-index: 1;
     &__text {
         font-size: 16px;
         font-weight: bold;
