@@ -3,6 +3,7 @@
     @include link-style($main-theme-color, $theme-color-active);
     padding-top: 6.25%;
     padding-bottom: 5%;
+    font-family: 'Open Sans', sans-serif;
 }
 .about-section__item {
     flex-basis: 24%;
@@ -13,13 +14,12 @@
 }
 .link {
     text-decoration: none;
-    color: $dark-light;
+    color: $emperor;
     text-align: center;
     &__icon {
         font-size: 70px;
     }
     &__caption {
-        font-family: "Open Sans";
         font-weight: 600;
         font-size: 18px;
         text-transform: uppercase;
@@ -27,12 +27,11 @@
         margin-bottom: 19px;
     }
     &__text {
-        font-family: "Open Sans";
         font-weight: lighter;
         font-size: 14px;
         line-height: 1.75;
     }
     &:hover > &__text {
-        color: $dark-light;
+        color: $emperor;
     }
 }

@@ -48,14 +48,14 @@
     @extend %main-maket;
     justify-content: space-between;
     align-items: center;
-    color: $dark;
+    color: $kilamanjaro;
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
 }
 
 .logo {
     font-family: 'Roboto', sans-serif;
-    color: $dark-light;
+    color: $emperor;
     font-weight: 300;
     font-size: 30px;
     &:first-letter {
@@ -71,7 +71,7 @@
 }
 
 .cart {
-    @include link-style ($dark, $dark);
+    @include link-style ($kilamanjaro, $kilamanjaro);
 }
 .counter {
     position: relative;
@@ -80,7 +80,7 @@
         font-weight: normal;
     }
     &:hover {
-        color: $dark;
+        color: $kilamanjaro;
         & .popup-basket {
             opacity: 1;
         }
@@ -93,7 +93,7 @@
         display: inline-block;
         height: 20px;
         width: 20px;
-        border: 1px solid $dark;
+        border: 1px solid $kilamanjaro;
         background-color: $white;
         color: $main-theme-color;
         position: relative;
@@ -103,7 +103,7 @@
     &__circle {
         height: 14px;
         width: 14px;
-        border: 1px solid $dark;
+        border: 1px solid $kilamanjaro;
         border-radius: 50%;
         position: absolute;
         top: -9px;
