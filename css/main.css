@@ -784,7 +784,7 @@ a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a
   color: #515151;
 }
 
-.wraper-new-collection {
+.wraper-new-collection, .wraper-best-sellers {
   background-color: #e9f0fd;
 }
 
