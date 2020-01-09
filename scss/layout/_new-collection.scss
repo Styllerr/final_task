@@ -71,6 +71,10 @@
         padding: 9px 16px;
         right: 10px;
     }
+    &_new>&__label-new,
+    &_sale>&__label-sale {
+        display: block;
+    }
 }
 .overlay-buy {
     // width: 235px;

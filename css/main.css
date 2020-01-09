@@ -20,6 +20,7 @@
 
 .card__label-new, .card__label-sale {
   font-size: 16px;
+  font-weight: 400;
   text-transform: uppercase;
   color: #515151;
   border: 1px solid #000000;
@@ -867,6 +868,11 @@ a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a
 .card__label-sale {
   padding: 9px 16px;
   right: 10px;
+}
+
+.card_new > .card__label-new,
+.card_sale > .card__label-sale {
+  display: block;
 }
 
 .overlay-buy {
