@@ -1,0 +1,36 @@
+.customer-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__line {
+    }
+    &__img {
+        width: 13.75%;
+        height: auto;
+        border: none;
+        border-radius: 50%; 
+    }
+    &__text {
+        max-width: 800px;
+        text-align: center;
+    }
+    &__from {
+        display: inline-block;
+    }
+
+}
+// .wraper-review-img {
+//      flex-basis: 100%;
+//      text-align: center;
+// }
+.review-selector {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    &__item {
+        width: 82px;
+        height: 82px;
+        border: none;
+        border-radius: 50%;
+    }
+}
