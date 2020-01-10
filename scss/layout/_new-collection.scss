@@ -1,4 +1,4 @@
-.wraper-new-collection {
+.wrapper-new-collection {
     background-color: $hawkes-blue;
 }
 .section-header {
@@ -32,15 +32,7 @@
     }
 }
 .colorline {
-    width: 164px;
-    display: inline-block;
-    height: 15px;
-    box-sizing: border-box;
-    border-top: 2px solid $white;
-    border-bottom: 2px solid $white;
-    background-color: $mountainMeadow;
-    box-shadow: 0 2px 0 $mountainMeadow, 0 -2px 0 $mountainMeadow;
-    text-align: center;
+    @include colorline ($mountainMeadow , $white);
 }
 .card {
     display: grid;
