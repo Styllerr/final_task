@@ -1,4 +1,4 @@
-@mixin link-style ($hover-color , $active-color) {
+@mixin link-style ($hover-color, $hover-color-bg , $active-color , $active-color-bg) {
 & a {
     text-decoration: none;
     color: inherit;
@@ -8,9 +8,11 @@
     }
     &:hover {
         color: $hover-color;
+        background-color: $hover-color-bg;
     }
     &:active {
-        color: $active-color
+        color: $active-color;
+        background-color: $active-color-bg;
     }
 }
 }
