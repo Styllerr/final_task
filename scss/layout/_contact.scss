@@ -12,12 +12,13 @@
     }
     &__line {
         text-align: center;
+        margin-top: 25px;
     }
 }
 .wrapper-contact {
     max-width: 1110px;
     margin: 0 auto;
-    padding: 80px 0 100px;
+    padding-top: 80px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

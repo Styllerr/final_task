@@ -143,7 +143,7 @@ pre {
 /**
  * Remove the gray background on active links in IE 10.
  */
-a, .top-header a:link, .top-header a:visited, .shop-navigation a:link, .shop-navigation a:visited, .cart a:link, .cart a:visited, .about-section a:link, .about-section a:visited, .info__network a:link, .info__network a:visited {
+a, .top-header a:link, .top-header a:visited {
   background-color: transparent;
 }
 
@@ -573,11 +573,23 @@ template {
 }
 
 .shop-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 41.62%;
   font-size: 14px;
   font-weight: bold;
 }
 
-.shop-navigation a, .shop-navigation a:link, .shop-navigation a:visited {
+.shop-navigation a, .shop-navigation .top-header a:link, .top-header .shop-navigation a:link, .shop-navigation .top-header a:visited, .top-header .shop-navigation a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.shop-navigation a:link, .shop-navigation a:visited {
   text-decoration: none;
   color: inherit;
 }
@@ -592,7 +604,12 @@ template {
   background-color: inherit;
 }
 
-.cart a, .cart a:link, .cart a:visited {
+.cart a, .cart .top-header a:link, .top-header .cart a:link, .cart .top-header a:visited, .top-header .cart a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cart a:link, .cart a:visited {
   text-decoration: none;
   color: inherit;
 }
@@ -697,14 +714,14 @@ template {
   margin-bottom: 60px;
 }
 
-a.carousel-control-next, .top-header a.carousel-control-next:link, .top-header a.carousel-control-next:visited, .shop-navigation a.carousel-control-next:link, .shop-navigation a.carousel-control-next:visited, .cart a.carousel-control-next:link, .cart a.carousel-control-next:visited, .about-section a.carousel-control-next:link, .about-section a.carousel-control-next:visited, .info__network a.carousel-control-next:link, .info__network a.carousel-control-next:visited {
+a.carousel-control-next, .top-header a.carousel-control-next:link, .top-header a.carousel-control-next:visited {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 15%;
 }
 
-a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a.carousel-control-prev:visited, .shop-navigation a.carousel-control-prev:link, .shop-navigation a.carousel-control-prev:visited, .cart a.carousel-control-prev:link, .cart a.carousel-control-prev:visited, .about-section a.carousel-control-prev:link, .about-section a.carousel-control-prev:visited, .info__network a.carousel-control-prev:link, .info__network a.carousel-control-prev:visited {
+a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a.carousel-control-prev:visited {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -762,6 +779,17 @@ a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a
   padding: 10px 27px;
 }
 
+.carousel-content__button:hover {
+  border: 3px solid #ffffff;
+  color: #4ec6ab;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.carousel-content__button:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 .about-section {
   max-width: 1100px;
   -webkit-box-pack: justify;
@@ -772,7 +800,12 @@ a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a
   font-family: 'Open Sans', sans-serif;
 }
 
-.about-section a, .about-section a:link, .about-section a:visited {
+.about-section a, .about-section .top-header a:link, .top-header .about-section a:link, .about-section .top-header a:visited, .top-header .about-section a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.about-section a:link, .about-section a:visited {
   text-decoration: none;
   color: inherit;
 }
@@ -1064,7 +1097,7 @@ a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a
   text-transform: uppercase;
 }
 
-.gallery-menu > a:not(:first-of-type), .top-header .gallery-menu > a:not(:first-of-type):link, .top-header .gallery-menu > a:not(:first-of-type):visited, .shop-navigation .gallery-menu > a:not(:first-of-type):link, .shop-navigation .gallery-menu > a:not(:first-of-type):visited, .cart .gallery-menu > a:not(:first-of-type):link, .cart .gallery-menu > a:not(:first-of-type):visited, .about-section .gallery-menu > a:not(:first-of-type):link, .about-section .gallery-menu > a:not(:first-of-type):visited, .info__network .gallery-menu > a:not(:first-of-type):link, .info__network .gallery-menu > a:not(:first-of-type):visited {
+.gallery-menu > a:not(:first-of-type), .top-header .gallery-menu > a:not(:first-of-type):link, .top-header .gallery-menu > a:not(:first-of-type):visited {
   margin-left: 10px;
 }
 
@@ -1463,12 +1496,13 @@ a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a
 
 .contact-section__line {
   text-align: center;
+  margin-top: 25px;
 }
 
 .wrapper-contact {
   max-width: 1110px;
   margin: 0 auto;
-  padding: 80px 0 100px;
+  padding-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1509,7 +1543,12 @@ a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a
   width: 50%;
 }
 
-.info__network a, .info__network a:link, .info__network a:visited {
+.info__network a, .info__network .top-header a:link, .top-header .info__network a:link, .info__network .top-header a:visited, .top-header .info__network a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.info__network a:link, .info__network a:visited {
   text-decoration: none;
   color: inherit;
 }
@@ -1614,5 +1653,50 @@ a.carousel-control-prev, .top-header a.carousel-control-prev:link, .top-header a
   color: #ffffff;
   text-transform: uppercase;
   background-color: #4ec6ab;
+}
+
+.footer {
+  max-width: 1600px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 33px 0 36px;
+  background-color: #000000;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  color: #4ec6ab;
+}
+
+.footer a, .footer .top-header a:link, .top-header .footer a:link, .footer .top-header a:visited, .top-header .footer a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer a:link, .footer a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer a:hover {
+  color: #c70000;
+  background-color: inherit;
+}
+
+.footer a:active {
+  color: #22ddb8;
+  background-color: inherit;
+}
+
+.footer__text {
+  margin: 0 auto;
+}
+
+.footer__copyright {
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */

@@ -71,6 +71,9 @@
 }
 
 .shop-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 41.62%;
     font-size: 14px;
     font-weight: bold;
     @include link-style($mountainMeadow, inherit , $mountainMeadow-active , inherit);
